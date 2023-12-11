@@ -15,7 +15,7 @@
         [(ngModel)]="descripcion"
       />
     </div>
-    <button type="button" class="btn btn-success" (click)="agregar()">Agregar tarea</button>
+    <button type="button" class="btn btn-outline-success btn-sm" (click)="agregar()">Agregar tarea</button>
   </div>
 </div>
 <app-listatareas [listaTareas]="tareas" (updatedList)="updateList($event)"></app-listatareas>

@@ -1,10 +1,9 @@
-h4{
-    margin: 2%;
-    color: darkgreen; 
-    text-decoration:underline;
-}
 .row{
-    margin-top: 10%;
-    background-color:rgb(196, 225, 204);
+    background-color: rgb(176, 199, 192);
+    margin-top: 20%;
     border-radius: 2%;
+}
+.table{
+    padding-top: 2%;
+    margin-top: 5%;
 }
