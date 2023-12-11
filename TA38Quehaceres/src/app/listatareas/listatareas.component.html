@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col">
+      <h4>Listado de tareas</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Título</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Eliminar</th>
+            <th scope="col">Completada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarea of listaTareas">
+            <td>{{tarea.titulo}}</td>
+            <td>{{tarea.descripcion}}</td>
+            <td><button type="button" class="btn btn-outline-danger btn-sm" (click)="eliminarTarea(tarea.id)">borrar</button></td>
+            <td *ngIf="tarea.completado; else elseBlock"><button type="button" class="btn btn-outline-warning btn-sm" (click)="tarea.completado = completado(tarea.completado)">No</button></td>
+            <ng-template #elseBlock><td><button type="button" class="btn btn-outline-success btn-sm" (click)="tarea.completado = completado(tarea.completado)">Sí</button></td></ng-template>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
